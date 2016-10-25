@@ -36,11 +36,13 @@ console.log(groups);
 console.log(groups[0]);
 console.log(groups[0][0]);
 
+// Append the groups into the DOM
 $(document).ready(function() {
   for (var i = 0; i < groups.length; i++) {
-  $('.all-groups').append("<p>Group " + (i + 1) + " is " + groups[i] + " !</p>");
+  $('.all-groups').append("<div class='group'><p>Group " + (i + 1) + " is " + groups[i] + "!</p></div>");
 }
 });
+
 
 // $(document).ready(function() {
 //   // for (var i = 0; i < groups.length; i++) {
