@@ -26,8 +26,9 @@ people.shuffle();
 while (people.length > 0) {
 
   chunks = people.splice(0, groupSize)
+  var chunksSpace = chunks.join(', ');
 
-  groups.push(chunks);
+  groups.push(chunksSpace);
   console.log(groups);
 
 };
