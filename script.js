@@ -22,6 +22,7 @@ Array.prototype.shuffle = function() {
 
 people.shuffle();
 
+// Split people into chunks and push new arrays into var groups
 while (people.length > 0) {
 
   chunks = people.splice(0, groupSize)
@@ -34,6 +35,12 @@ while (people.length > 0) {
 console.log(groups);
 console.log(groups[0]);
 console.log(groups[0][0]);
+
+$(document).ready(function() {
+  for (var i = 0; i < groups.length; i++) {
+  $('.all-groups').append("<p>Group " + (i + 1) + " is " + groups[i] + " !</p>");
+}
+});
 
 // $(document).ready(function() {
 //   // for (var i = 0; i < groups.length; i++) {
@@ -49,18 +56,3 @@ console.log(groups[0][0]);
 //   document.getElementById("g8-container").innerHTML = "<p>" + group8 + "</p>";
 //
 // });
-
-// var groups = [];
-// var testing = ['a','b','c','d','e','f','g','b','c','d','e','f','g','b','c','d','e','f','g','b','c','d','e','f','g']
-//   , chunks
-//
-// testing.shuffle();
-//
-// while (testing.length > 0) {
-//
-//   chunks = testing.splice(0, groupSize)
-//
-//   groups.push(chunks);
-//   console.log(groups);
-//
-// };
