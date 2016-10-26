@@ -1,5 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Karla');
 
 body {
   font-family: Karla, arial, sans-serif;
+  background-color: #f1f3f7;
+}
+
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.fancy {
+  font-family: Bitter, garamond, sans-serif;
+  font-style: italic;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.groupheader {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
 }

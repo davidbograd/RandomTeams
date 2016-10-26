@@ -33,29 +33,9 @@ while (people.length > 0) {
 
 };
 
-console.log(groups);
-console.log(groups[0]);
-console.log(groups[0][0]);
-
 // Append the groups into the DOM
 $(document).ready(function() {
   for (var i = 0; i < groups.length; i++) {
-  $('.all-groups').append("<div class='group'><p>Group " + (i + 1) + " is " + groups[i] + "!</p></div>");
+  $('.all-groups').append("<div class='group'><p><span class='groupheader'>Group " + (i + 1) + "</span></br> " + groups[i] + "</p></div>");
 }
 });
-
-
-// $(document).ready(function() {
-//   // for (var i = 0; i < groups.length; i++) {
-//   //   $('.groups').append('')
-//   // }
-//   document.getElementById("g1-container").innerHTML = "<p>" + group1 + "</p>";
-//   document.getElementById("g2-container").innerHTML = "<p>" + group2 + "</p>";
-//   document.getElementById("g3-container").innerHTML = "<p>" + group3 + "</p>";
-//   document.getElementById("g4-container").innerHTML = "<p>" + group4 + "</p>";
-//   document.getElementById("g5-container").innerHTML = "<p>" + group5 + "</p>";
-//   document.getElementById("g6-container").innerHTML = "<p>" + group6 + "</p>";
-//   document.getElementById("g7-container").innerHTML = "<p>" + group7 + "</p>";
-//   document.getElementById("g8-container").innerHTML = "<p>" + group8 + "</p>";
-//
-// });
