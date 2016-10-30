@@ -1,10 +1,11 @@
 $(document).ready(function() {
     $(".btn").on('click', function () {
-        var people = ["Markus Eriksson", "Leticia Hoshino", "Yemi Afolabi", "Eskil Fogelström", "Josefina Liedberg", "David Bjørn Bograd", "Tilda Dahlgren", "Damien Vignol", "Sofie Cousu", "Carolina Lindelöw", "Bilal Khan", "Louise Brandrup-Wognsen", "Emilia Lehto", "Albin Hagström",
-            "Victor Borg", "Anna Stella Lo-Ré", "Loucmane", "Angelica Ruth", "Victoria VL", "Johan Hellström", "Micke Skoglund", "Anna Unger", "Isaac Sennerholt", "Cyndie Léa Vintilescu", "Mahle Rakela Robin", "Louise Ek", "Ibrahim Bajwa", "Abodi Ismail",
-            "Alex Ashman", "Elin Grass Casalini", "Amanda Schultz", "Abenezer Abebe", "Julia Hoff", "Enny Hellsén", "Michel George", "Abdullahi Hussein", "Teodor Meurling", "Andrea Sami Mogren", "Thea Arpine Gasparyan", "Jakob Eberson"
-        ];
+        // var people = ["Markus Eriksson", "Leticia Hoshino", "Yemi Afolabi", "Eskil Fogelström", "Josefina Liedberg", "David Bjørn Bograd", "Tilda Dahlgren", "Damien Vignol", "Sofie Cousu", "Carolina Lindelöw", "Bilal Khan", "Louise Brandrup-Wognsen", "Emilia Lehto", "Albin Hagström",
+        //     "Victor Borg", "Anna Stella Lo-Ré", "Loucmane", "Angelica Ruth", "Victoria VL", "Johan Hellström", "Micke Skoglund", "Anna Unger", "Isaac Sennerholt", "Cyndie Léa Vintilescu", "Mahle Rakela Robin", "Louise Ek", "Ibrahim Bajwa", "Abodi Ismail",
+        //     "Alex Ashman", "Elin Grass Casalini", "Amanda Schultz", "Abenezer Abebe", "Julia Hoff", "Enny Hellsén", "Michel George", "Abdullahi Hussein", "Teodor Meurling", "Andrea Sami Mogren", "Thea Arpine Gasparyan", "Jakob Eberson"
+        // ];
         var groupSize = $("input[name=checkListItem]").val();
+        var groupNames = $("textarea[name=names]").val().replace(/\n+/g,"\n").split("\n");
         var groups = [];
 
         $(".group").remove();
@@ -24,12 +25,12 @@ $(document).ready(function() {
             return input;
         };
 
-        people.shuffle();
+        groupNames.shuffle();
 
-        // Split people into chunks and push new arrays into var groups
-        while (people.length > 0) {
+        // Split groupNames into chunks and push new arrays into var groups
+        while (groupNames.length > 0) {
 
-            chunks = people.splice(0, groupSize);
+            chunks = groupNames.splice(0, groupSize);
             var chunksSpace = chunks.join(', ');
 
             groups.push(chunksSpace);
