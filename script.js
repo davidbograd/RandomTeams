@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $(".btn").on('click', function() {
-      var groupSize = $("input[name=checkListItem]").val();
-      console.log(groupSize);
+        var groupSize = $("input[name=checkListItem]").val();
+
+        // if statement checks if groupSize is a numeric value > 0, to avoid crashes
         if (groupSize > 0) {
             // var people = ["Markus Eriksson", "Leticia Hoshino", "Yemi Afolabi", "Eskil Fogelström", "Josefina Liedberg", "David Bjørn Bograd", "Tilda Dahlgren", "Damien Vignol", "Sofie Cousu", "Carolina Lindelöw", "Bilal Khan", "Louise Brandrup-Wognsen", "Emilia Lehto", "Albin Hagström",
             //     "Victor Borg", "Anna Stella Lo-Ré", "Loucmane", "Angelica Ruth", "Victoria VL", "Johan Hellström", "Micke Skoglund", "Anna Unger", "Isaac Sennerholt", "Cyndie Léa Vintilescu", "Mahle Rakela Robin", "Louise Ek", "Ibrahim Bajwa", "Abodi Ismail",
